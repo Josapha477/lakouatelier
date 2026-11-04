@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Anneau de visibilité standard pour l'accessibilité au clavier (WCAG 2.4.7) */
+  :focus-visible {
+    outline: 2px solid #25352D;
+    outline-offset: 2px;
+  }
+
+  /* Respect des utilisateurs sensibles aux animations */
+  @media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
