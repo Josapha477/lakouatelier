@@ -19,6 +19,9 @@ import { SITE_CONFIG } from '../config/site';
 import { formatCurrency } from '../utils/formatCurrency';
 import { createProductInquiryUrl } from '../utils/whatsapp';
 import ProductCard from '../components/product/ProductCard';
+import useSEO from '../hooks/useSEO';
+
+
 
 export default function ProductPage() {
   const { id } = useParams();
@@ -36,7 +39,21 @@ export default function ProductPage() {
 
   // Recherche du produit dans le catalogue centralisé
   const product = PRODUCTS.find((p) => p.id === id);
+  
+  useSEO({
+  title: product
+    ? `${product.name} | LAKOU ATELIER`
+    : 'Produit introuvable | LAKOU ATELIER',
 
+  description: product
+    ? product.shortDescription
+    : 'Cette création est introuvable dans notre catalogue.',
+
+  path: product ? `/produit/${product.id}` : '/catalogue',
+
+  image: product?.images?.[0] ?? null,
+});
+   
   // Si le produit n'existe pas
   if (!product) {
     return (

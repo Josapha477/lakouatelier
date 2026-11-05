@@ -12,8 +12,17 @@ import ProductCard from '../components/product/ProductCard';
 import { PRODUCTS, getProductImage } from '../data/products';
 import { SITE_CONFIG } from '../config/site';
 import { createDirectWhatsAppUrl } from '../utils/whatsapp';
+import useSEO from '../hooks/useSEO';
+
+
 
 export default function Home() {
+  useSEO({
+    title: 'Artisanat haïtien | LAKOU ATELIER',
+    description: 'Découvrez notre vitrine conceptuelle dédiée à l’artisanat et à la décoration d’inspiration haïtienne.',
+    path: '/',
+  });
+
   // Sélectionne exactement 4 produits vedettes définis dans le catalogue
   const featuredProducts = PRODUCTS.filter((product) => product.featured).slice(0, 4);
 
