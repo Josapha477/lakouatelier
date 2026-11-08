@@ -12,7 +12,7 @@ export const SITE_CONFIG = {
   // Paramètres WhatsApp centralisés
   whatsapp: {
     // Numéro de démonstration clairement identifiable (+509 est l'indicatif téléphonique d'Haïti)
-    phoneNumber: '+50900000000',
+    phoneNumber: '+50936964953',
     greeting: 'Bonjour LAKOU ATELIER, je souhaite commander les créations suivantes :',
     orderClosing: 'Pouvez-vous me confirmer la disponibilité et les modalités de livraison ? Merci !',
   },
@@ -21,7 +21,7 @@ export const SITE_CONFIG = {
   contact: {
     email: 'contact@lakou-atelier.fictif',
     address: 'Atelier de création & Galerie (Fictif), Port-au-Prince, Haïti',
-    phoneDisplay: '+509 00 00 0000',
+    phoneDisplay: '+509 36 96 4953',
     schedule: 'Du lundi au samedi, de 9h00 à 18h00 (EST / UTC-5)',
   },
 
