@@ -19,7 +19,7 @@ export const SITE_CONFIG = {
 
   // Informations de contact fictives
   contact: {
-    email: 'contact@lakou-atelier.fictif',
+    email: 'midleyjoseph45@gmail.com',
     address: 'Atelier de création & Galerie (Fictif), Port-au-Prince, Haïti',
     phoneDisplay: '+509 36 96 4953',
     schedule: 'Du lundi au samedi, de 9h00 à 18h00 (EST / UTC-5)',
